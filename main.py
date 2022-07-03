@@ -1,35 +1,23 @@
-# 🚨 Don't change the code below 👇
-year = int(input("Which year do you want to check? "))
-# 🚨 Don't change the code above 👆
-
-#Write your code below this line 👇
-
-calc1 = year % 4
-calc2 = year % 100
-calc3 = year % 400
-
-# % == modulo operater... how many remaining numbers left E.G 11 % 5 = 1
-
-#have to work backwards
-
-if calc3 == 0:
-    print("Leap year.")
-elif calc2 == 0:
-    print("Not leap year.")
-elif calc1 == 0:
-    print("Leap year.")
-else:
-    print("Not leap year.")
-
-#### teacher's version
-
-if year % 4 == 0:
-  if year % 100 == 0:
-    if year % 400 == 0:
-      print("leap year")
-    else:
-      print("not leap year")
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+bill = 0
+if height >= 120:
+  print("You can ride the rollercoaster!")
+  age = int(input("What is your age? "))
+  if age < 12:
+    bill = 5
+    print("Child tickets are £5")
+  elif age <=18:
+    bill = 7
+    print("Youth tickets are £7")
   else:
-    print("leap year")
+    bill = 12
+    print("Adult tickets are £12")
+
+  wants_photo = input("Want Photos for £3? y or n ")
+  if wants_photo == "y":
+    bill += 3
+  print(f"Your total bill is £{bill}")
+  
 else:
-  print("not leap year")
+  print("Sorry, you have to grow taller before you can ride.")
