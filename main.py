@@ -1,26 +1,20 @@
-#if condition:
-  #if another condition:
-    #do this
-  #else:
-    #do this
-#else:
-  #do this
+# 🚨 Don't change the code below 👇
+height = float(input("enter your height in m: "))
+weight = float(input("enter your weight in kg: "))
+# 🚨 Don't change the code above 👆
 
-#Elif ---- can add as many elif's as u like
+#Write your code below this line 👇
 
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? "))
+#age = float(input("enter your age: "))
+bmi = round(weight / (height ** 2))
 
-if height >= 120:
-  print("You can ride the rollercoaster!")
-  age = int(input("What is your age? "))
-  if age < 12:
-    print("Please pay £5")
-  elif age <=18:
-    print("Please pay £7")
-  elif age ==23:
-    print("Awesome age, you get to go for free.")
-  else:
-    print("Please pay £12")
+if bmi <= 18.5:
+    print(f"Your BMI is {bmi}, you are underweight.")
+elif bmi <=25:
+    print(f"Your BMI is {bmi}, you have a normal weight.")
+elif bmi <=30:
+    print(f"Your BMI is {bmi}, you are slightly overweight.")
+elif bmi <=35:
+    print(f"Your BMI is {bmi}, you are obese.")
 else:
-  print("Sorry, you have to grow taller before you can ride.")
+    print(f"Your BMI is {bmi}, you are clinically obese.")
