@@ -1,20 +1,22 @@
 # 🚨 Don't change the code below 👇
-height = float(input("enter your height in m: "))
-weight = float(input("enter your weight in kg: "))
+year = int(input("Which year do you want to check? "))
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
 
-#age = float(input("enter your age: "))
-bmi = round(weight / (height ** 2))
+calc1 = year % 4
+calc2 = year % 100
+calc3 = year % 400
 
-if bmi <= 18.5:
-    print(f"Your BMI is {bmi}, you are underweight.")
-elif bmi <=25:
-    print(f"Your BMI is {bmi}, you have a normal weight.")
-elif bmi <=30:
-    print(f"Your BMI is {bmi}, you are slightly overweight.")
-elif bmi <=35:
-    print(f"Your BMI is {bmi}, you are obese.")
+# % == modulo operater... how many remaining numbers left E.G 11 % 5 = 1
+
+#have to work backwards
+
+if calc3 == 0:
+    print("Leap year.")
+elif calc2 == 0:
+    print("Not leap year.")
+elif calc1 == 0:
+    print("Leap year.")
 else:
-    print(f"Your BMI is {bmi}, you are clinically obese.")
+    print("Not leap year.")
